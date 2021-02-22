@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+email=$GIT_AUTHOR_EMAIL
+
+if [[ $email =~ .* ]]; then
+     echo "Your email $email satisfies Git policy"
+     exit 0
+else
+     echo "Your email $email doesn't satisfies Git policy"
+     exit 1
+fi
